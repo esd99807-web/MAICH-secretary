@@ -21,8 +21,6 @@
         }
         @media print {
             .no-print { display: none !important; }
-            .print-only { display: block !important; }
-            .shadow-lg, .shadow-md { box-shadow: none !important; }
             body { background-color: white !important; }
         }
     </style>
@@ -66,25 +64,33 @@
                     </div>
 
                     <!-- 會員大會 -->
-                    <div onclick="selectMeeting('y1_m1')" id="card-y1_m1" class="meeting-card bg-indigo-50 hover:bg-indigo-100/80 border-2 border-indigo-500 rounded-xl p-3 cursor-pointer transition mb-3 ml-8 relative shadow-sm">
+                    <div onclick="switchMeeting('y1_m1')" id="card-y1_m1" class="meeting-card bg-indigo-50 hover:bg-indigo-100/80 border-2 border-indigo-500 rounded-xl p-3 cursor-pointer transition mb-3 ml-8 relative shadow-sm ring-2 ring-indigo-600">
                         <div class="flex items-center justify-between">
-                            <span class="meeting-name font-bold text-indigo-900 text-sm">第 1 年 第 1 次會員大會</span>
+                            <span class="font-bold text-indigo-900 text-sm">第 1 年 第 1 次會員大會</span>
                             <span class="text-xs bg-indigo-600 text-white px-2 py-0.5 rounded">選出第1屆理監事</span>
                         </div>
                         <p class="text-xs text-indigo-700/80 mt-1"><i class="fa-solid fa-users text-xs mr-1"></i>全體會員出席 / 投票改選</p>
                     </div>
 
                     <!-- 第1次理監事會議 -->
-                    <div onclick="selectMeeting('y1_b1')" id="card-y1_b1" class="meeting-card bg-amber-50 hover:bg-amber-100/80 border-2 border-amber-400 rounded-xl p-3 cursor-pointer transition mb-3 ml-8 relative shadow-sm">
+                    <div onclick="switchMeeting('y1_b1')" id="card-y1_b1" class="meeting-card bg-amber-50 hover:bg-amber-100/80 border-2 border-amber-400 rounded-xl p-3 cursor-pointer transition mb-3 ml-8 relative shadow-sm">
                         <div class="flex items-center justify-between">
-                            <span class="meeting-name font-bold text-amber-900 text-sm">第 1 屆 第 1 次理監事會議</span>
+                            <span class="font-bold text-amber-900 text-sm">第 1 屆 第 1 次理監事會議</span>
                             <span class="text-xs bg-amber-600 text-white px-2 py-0.5 rounded">選出理事長</span>
                         </div>
-                        <p class="text-xs text-amber-700/80 mt-1"><i class="fa-solid fa-clock text-xs mr-1"></i>會員大會閉會後 15 日內召開</p>
+                        <p class="text-xs text-amber-700/80 mt-1"><i class="fa-solid fa-clock text-xs mr-1"></i>大會閉會 15 日內召開</p>
                     </div>
 
                     <!-- 第1年例行會議 2-8 -->
-                    <div id="y1-routine-container" class="space-y-2 ml-8"></div>
+                    <div class="space-y-2 ml-8">
+                        <div onclick="switchMeeting('y1_b2')" id="card-y1_b2" class="meeting-card bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-lg p-2.5 cursor-pointer transition flex items-center justify-between"><span class="text-xs font-semibold text-slate-700">第 1 屆 第 2 次理監事會議</span><span class="text-[10px] text-slate-500 bg-slate-200/60 px-1.5 py-0.5 rounded">例行會務</span></div>
+                        <div onclick="switchMeeting('y1_b3')" id="card-y1_b3" class="meeting-card bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-lg p-2.5 cursor-pointer transition flex items-center justify-between"><span class="text-xs font-semibold text-slate-700">第 1 屆 第 3 次理監事會議</span><span class="text-[10px] text-slate-500 bg-slate-200/60 px-1.5 py-0.5 rounded">例行會務</span></div>
+                        <div onclick="switchMeeting('y1_b4')" id="card-y1_b4" class="meeting-card bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-lg p-2.5 cursor-pointer transition flex items-center justify-between"><span class="text-xs font-semibold text-slate-700">第 1 屆 第 4 次理監事會議</span><span class="text-[10px] text-slate-500 bg-slate-200/60 px-1.5 py-0.5 rounded">例行會務</span></div>
+                        <div onclick="switchMeeting('y1_b5')" id="card-y1_b5" class="meeting-card bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-lg p-2.5 cursor-pointer transition flex items-center justify-between"><span class="text-xs font-semibold text-slate-700">第 1 屆 第 5 次理監事會議</span><span class="text-[10px] text-slate-500 bg-slate-200/60 px-1.5 py-0.5 rounded">例行會務</span></div>
+                        <div onclick="switchMeeting('y1_b6')" id="card-y1_b6" class="meeting-card bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-lg p-2.5 cursor-pointer transition flex items-center justify-between"><span class="text-xs font-semibold text-slate-700">第 1 屆 第 6 次理監事會議</span><span class="text-[10px] text-slate-500 bg-slate-200/60 px-1.5 py-0.5 rounded">例行會務</span></div>
+                        <div onclick="switchMeeting('y1_b7')" id="card-y1_b7" class="meeting-card bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-lg p-2.5 cursor-pointer transition flex items-center justify-between"><span class="text-xs font-semibold text-slate-700">第 1 屆 第 7 次理監事會議</span><span class="text-[10px] text-slate-500 bg-slate-200/60 px-1.5 py-0.5 rounded">例行會務</span></div>
+                        <div onclick="switchMeeting('y1_b8')" id="card-y1_b8" class="meeting-card bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-lg p-2.5 cursor-pointer transition flex items-center justify-between"><span class="text-xs font-semibold text-slate-700">第 1 屆 第 8 次理監事會議</span><span class="text-[10px] text-slate-500 bg-slate-200/60 px-1.5 py-0.5 rounded">例行會務</span></div>
+                    </div>
                 </div>
 
                 <!-- 第二年區塊 -->
@@ -94,7 +100,5 @@
                     </div>
 
                     <!-- 第2年例行會議 9-15 -->
-                    <div id="y2-routine-container" class="space-y-2 ml-8 mb-3"></div>
-
-                    <!-- 第16次理監事會議 (審查大會選務) -->
-                    <div onclick="selectMeeting('y2_b16')" id="card-y2_b16" class="meeting-card bg-amber-50 hover:bg-amber-100/80 border-2 border-amber-400 rounded-xl p-3
+                    <div class="space-y-2 ml-8 mb-3">
+                        <div onclick="switchMeeting('y2_
